@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>App Redirect</title>
+    <script>
+        function redirectToAppOrStore() {
+            // Open the app using the deep link
+            window.location.href = 'deeplinking://product/123';
+
+            // If the app is not installed, redirect to Play Store
+            setTimeout(function() {
+                window.location.href = 'https://play.google.com/store/apps/details?id=com.deeplinking';
+            }, 1000);
+        }
+        
+        // Call redirect function when the page loads
+        window.onload = redirectToAppOrStore;
+    </script>
+</head>
+<body>
+    <p>Redirecting to app...</p>
+</body>
+</html>
